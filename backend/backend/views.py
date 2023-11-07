@@ -61,4 +61,4 @@ def get_page(request):
     document = s3.download_file(uri_s3, page)
     # convert to string
     document = document.decode("utf-8")
-    return Response(document)ß
+    return Response(document)
