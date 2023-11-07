@@ -56,5 +56,9 @@ def search(request):
 @api_view(["GET"])
 def get_page(request):
     page = request.GET.get("page", "")
+    uri_s3 = "s3://my-hive/corpus/txt/" + request.GET.get("page", "")
     # obteniniendo el documento del s3
-    return Response(page)
+    document = s3.download_file(uri_s3, page)
+    # convert to string
+    document = document.decode("utf-8")
+    return Response(document)ß

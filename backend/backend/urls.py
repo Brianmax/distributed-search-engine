@@ -22,4 +22,5 @@ from backend.views import search, hello
 urlpatterns = [
     path('search', search, name='search'),
     path('', hello, name='hello'),
+    path('document/<str:page>', get_page, name='document')
 ]
