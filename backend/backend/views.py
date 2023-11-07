@@ -52,3 +52,9 @@ def search(request):
         pagelist = [[key, temp_dic[key]] for key in temp_dic]
 
     return Response(pagelist)
+
+@api_view(["GET"])
+def get_page(request):
+    page = request.GET.get("page", "")
+    # obteniniendo el documento del s3
+    return Response(page)

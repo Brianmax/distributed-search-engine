@@ -1,4 +1,4 @@
-bucket_name="search-engine-bd"
+bucket_name="my-hive"
 
 chmod +x pagerank_mapper.py pagerank_reducer.py rank_map.py
 

@@ -1,4 +1,4 @@
-bucket_name="search-engine-bd"
+bucket_name="my-hive"
 
 chmod +x mapper.py reducer.py
 
