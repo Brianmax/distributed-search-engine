@@ -54,7 +54,7 @@ def search(request):
     return Response(pagelist)
 
 @api_view(["GET"])
-def get_page(request, idTexto):
+def get_document_query(request, idTexto):
     print("Entro")
     uri_s3 = "s3://my-hive/corpus/txt/" + idTexto + ".txt"
     # obteniniendo el documento del s3
