@@ -26,7 +26,7 @@ const search = () => {
     body: JSON.stringify(dataToSend),
   };
 
-  fetch("http://204.236.220.115:8000/search", requestOptions)
+  fetch("http://3.239.106.87:8000//search", requestOptions)
     .then((response) => response.json())
     .then((data) => displayResults(data))
     .catch((error) => console.error("Error:", error));
