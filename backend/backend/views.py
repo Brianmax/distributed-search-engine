@@ -61,4 +61,4 @@ def get_page(request, idTexto):
     print("Pasamos")
     # convert to string
     document = document.decode("utf-8")
-    return Response(document)
+    return {"idTexto": idTexto}
