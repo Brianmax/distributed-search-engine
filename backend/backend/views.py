@@ -58,7 +58,7 @@ def get_page(request, idTexto):
     page = request.GET.get("page", "")
     uri_s3 = "s3://my-hive/corpus/txt/" + idTexto + ".txt"
     # obteniniendo el documento del s3
-    document = s3.download_file(uri_s3, page)
+    document = s3.download_file(uri_s3)
     print("Pasamos")
     # convert to string
     document = document.decode("utf-8")
